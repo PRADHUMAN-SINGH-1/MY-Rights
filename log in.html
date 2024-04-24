@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000000; 
+      color: #ffffff;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+    nav ul li:last-child {
+      margin-right: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff; 
+    }
+    #login-container {
+      text-align: center;
+      margin-top: 100px; 
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #ffffff; 
+    }
+    #login-container input {
+      width: 250px;
+      padding: 10px;
+      margin: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    #login-container button {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #brand-name {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <span id="brand-name">MY Rights</span>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="login-container">
+    <h2>Login</h2>
+    <form id="login-form" action="Index.html">
+      <input type="text" id="username" placeholder="Username">
+      <br>
+      <input type="password" id="password" placeholder="Password">
+      <br>
+      <button type="submit">Login</button>
+    </form>
+    <p>New user? <a href="register page.html">Register</a></p>
+  </div>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      console.log('Username:', username);
+      console.log('Password:', password);
+    });
+  </script>
+</body>
+</html>
